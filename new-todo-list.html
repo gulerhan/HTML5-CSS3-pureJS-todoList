@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./new-todo-list.css" rel="stylesheet" type="text/css">
+    <link href="./reset.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>New Todo List</title>
+</head>
+<body>
+    <div class="todo-container">
+        <div class="header">
+            <div class="pin-things">
+            <img src="./pinIcon.png" class="pin-image-settings">
+            <p class="things">Yapılacaklar</p>
+        </div>
+            <div class="select-all-par">
+            <p class="select-par">Tamamlananlar</p>
+            <input type="checkbox" name="checkAll" id="checkAll" onclick="selectAll(this)" >
+            </div>
+        </div>
+        <div class="todo-item-list" id="itemList">
+            <div class="todo-item">
+                <p class="todo-text" >İngilizce çalış</p>
+                <div class="action-box">
+                    <input type="checkbox" onclick="edited(this)" name="edit" id="edit">
+                    <button onclick="deleteItemFn(this)" class="icon"><i class="fas fa-trash fa-1x"></i></button>
+                </div>
+            </div>
+            
+        </div>
+        <div class="footer">
+            <input type="text" name="todoInput" id="todoInput">
+            <button class="icon" id="inputId"><i class="fas fa-plus fa-2x" ></i></button>
+        </div>
+    </div>
+    <script src="./new-todo-list.js"></script>
+</body> 
+</html>
